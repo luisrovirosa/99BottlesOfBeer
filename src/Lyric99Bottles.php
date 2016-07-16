@@ -14,7 +14,7 @@ class Lyric99Bottles {
       $bottlesAfterTakeOne = $bottlesOnTheWall - 1;
       $stanzas[] = new Stanza([
         new BottleOnTheWallSentence($bottlesOnTheWall),
-        new Sentence("Take one down and pass it around, " . $bottlesAfterTakeOne . " bottles of beer on the wall.")
+        new TakeOneAndPassItSentence($bottlesAfterTakeOne)
       ]);
     }
     return $stanzas;
