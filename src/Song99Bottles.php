@@ -21,7 +21,7 @@ class Song99Bottles {
   }
 
   /**
-   * @return array
+   * @return Sentence[]
    */
   private function sentences() {
     $lyric = new Lyric99Bottles();
@@ -29,11 +29,11 @@ class Song99Bottles {
   }
 
   /**
-   * @param $sentences
+   * @param Sentence[] $sentences
    */
   private function singSentences($sentences) {
-    array_map(function ($sentence) {
-      $this->output->sing($sentence);
+    array_map(function (Sentence $sentence) {
+      $sentence->sing($this->output);
     }, $sentences);
   }
 }
