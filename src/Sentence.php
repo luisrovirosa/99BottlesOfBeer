@@ -16,7 +16,7 @@ class Sentence {
     $this->sentence = $sentence;
   }
 
-  public function sing(Output $output) {
-    $output->sing($this->sentence);
+  public function sing(Singer $singer) {
+    $singer->sing($this->sentence);
   }
 }

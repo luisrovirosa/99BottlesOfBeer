@@ -17,8 +17,11 @@ class Singer {
   }
 
   public function sing($singables) {
-    array_map(function ($singable) {
-      $singable->sing($this->output);
-    }, $singables);
+    if (is_array($singables)) {
+      return array_map(function ($singable) {
+        $singable->sing($this);
+      }, $singables);
+    }
+    return $this->output->sing($singables);
   }
 }

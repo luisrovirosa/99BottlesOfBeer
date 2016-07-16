@@ -16,9 +16,7 @@ class Stanza {
     $this->sentences = $sentences;
   }
 
-  public function sing(Output $output) {
-    array_map(function (Sentence $sentence) use ($output) {
-      $sentence->sing($output);
-    }, $this->sentences);
+  public function sing(Singer $singer) {
+    $singer->sing($this->sentences);
   }
 }
