@@ -25,11 +25,8 @@ class Song99Bottles {
    * @return array
    */
   private function sentences() {
-    $sentences = [
-      '99 bottles of beer on the wall, 99 bottles of beer.',
-      'Take one down and pass it around, 98 bottles of beer on the wall.'
-    ];
-    return $sentences;
+    $lyric = new Lyric99Bottles();
+    return $lyric->sentences();
   }
 
   /**
