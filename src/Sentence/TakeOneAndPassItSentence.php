@@ -17,6 +17,9 @@ class TakeOneAndPassItSentence extends Sentence {
    * @return string
    */
   private function sentence($numberOfSentence) {
+    if ($numberOfSentence == 100){
+      return 'Go to the store and buy some more, 99 bottles of beer on the wall.';
+    }
     return "Take one down and pass it around, " . ($this->remainingBottles($numberOfSentence))
     . " bottles of beer on the wall.";
   }
