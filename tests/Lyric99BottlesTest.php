@@ -27,4 +27,15 @@ class Lyric99BottlesTest extends \PHPUnit_Framework_TestCase {
 
     $output->sing("98 bottles of beer on the wall, 98 bottles of beer.")->shouldHaveBeenCalled();
   }
+  /** @test */
+  public function sing_second_stanza_sings_takes_one() {
+    $lyric = new Lyric99Bottles();
+    $stanzas = $lyric->stanzas();
+    $stanza = $stanzas[1];
+    $output = $this->prophesize(Output::class);
+
+    $stanza->sing(new Singer($output->reveal()));
+
+    $output->sing("Take one down and pass it around, 97 bottles of beer on the wall.")->shouldHaveBeenCalled();
+  }
 }
