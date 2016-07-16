@@ -17,23 +17,23 @@ class Song99Bottles {
   }
 
   public function sing() {
-    $this->singSentences($this->sentences());
+    $this->singStanzas($this->stanzas());
   }
 
   /**
-   * @return Sentence[]
+   * @return Stanza[]
    */
-  private function sentences() {
+  private function stanzas() {
     $lyric = new Lyric99Bottles();
-    return $lyric->sentences();
+    return $lyric->stanzas();
   }
 
   /**
-   * @param Sentence[] $sentences
+   * @param Stanza[] $stanzas
    */
-  private function singSentences($sentences) {
-    array_map(function (Sentence $sentence) {
-      $sentence->sing($this->output);
-    }, $sentences);
+  private function singStanzas($stanzas) {
+    array_map(function (Stanza $stanza) {
+      $stanza->sing($this->output);
+    }, $stanzas);
   }
 }
