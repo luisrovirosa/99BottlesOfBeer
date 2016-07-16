@@ -17,7 +17,17 @@ class TakeOneAndPassItSentence extends Sentence {
    * @return string
    */
   private function sentence($numberOfSentence) {
-    $remainingBottles = self::MAX_NUMBER_OF_BOTTLES_ON_THE_WALL - $numberOfSentence;
-    return "Take one down and pass it around, " . ($remainingBottles) . " bottles of beer on the wall.";
+    return "Take one down and pass it around, " . ($this->remainingBottles($numberOfSentence))
+    . " bottles of beer on the wall.";
+  }
+
+  /**
+   * @param $numberOfSentence
+   * @return int
+   */
+  private function remainingBottles($numberOfSentence) {
+    return ($numberOfSentence != 99)
+      ? self::MAX_NUMBER_OF_BOTTLES_ON_THE_WALL - $numberOfSentence
+      : 'no more';
   }
 }

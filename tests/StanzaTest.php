@@ -27,6 +27,15 @@ class StanzaTest extends \PHPUnit_Framework_TestCase {
     $output->sing("Take one down and pass it around, 97 bottles of beer on the wall.")->shouldHaveBeenCalled();
   }
 
+  /** @test */
+  public function sing_second_stanza_of_1_bottle() {
+    $output = $this->output();
+
+    $this->sing(Stanza::sentence(99), $output);
+
+    $output->sing("Take one down and pass it around, no more bottles of beer on the wall.")->shouldHaveBeenCalled();
+  }
+
   /**
    * @param Stanza $stanza
    * @param ObjectProphecy $objectProphecy
