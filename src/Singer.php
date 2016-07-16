@@ -21,11 +21,19 @@ class Singer {
    */
   public function sing($toSing) {
     if (is_array($toSing)) {
-      array_map(function (Singable $singable) {
-        $singable->sing($this);
-      }, $toSing);
-      return;
+      $this->singMany($toSing);
     }
-    $this->output->sing($toSing);
+    else {
+      $this->output->sing($toSing);
+    }
+  }
+
+  /**
+   * @param Singable[] $toSing
+   */
+  private function singMany(array $toSing) {
+    array_map(function (Singable $singable) {
+      $singable->sing($this);
+    }, $toSing);
   }
 }
