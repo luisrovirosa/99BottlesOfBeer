@@ -17,8 +17,7 @@ class Song99Bottles {
   }
 
   public function sing() {
-    $sentences = $this->sentences();
-    $this->singSentences($sentences);
+    $this->singSentences($this->sentences());
   }
 
   /**
