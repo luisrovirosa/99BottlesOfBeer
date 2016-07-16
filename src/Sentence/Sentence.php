@@ -1,6 +1,9 @@
 <?php
 
-namespace Song99Bottles;
+namespace Song99Bottles\Sentence;
+
+use Song99Bottles\Singable;
+use Song99Bottles\Singer;
 
 class Sentence implements Singable {
   /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Song99Bottles;
+namespace Song99Bottles\Sentence;
 
 class BottleOnTheWallSentence extends Sentence {
 

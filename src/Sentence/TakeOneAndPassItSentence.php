@@ -1,6 +1,6 @@
 <?php
 
-namespace Song99Bottles;
+namespace Song99Bottles\Sentence;
 
 class TakeOneAndPassItSentence extends Sentence {
 

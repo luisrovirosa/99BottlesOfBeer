@@ -2,6 +2,9 @@
 
 namespace Song99Bottles;
 
+use Song99Bottles\Sentence\BottleOnTheWallSentence;
+use Song99Bottles\Sentence\TakeOneAndPassItSentence;
+
 class Lyric99Bottles {
 
   /**
