@@ -13,11 +13,10 @@ class Lyric99Bottles {
   public function stanzas() {
     $stanzas = [];
     for ($i = 0; $i < 100; $i++) {
-      $bottlesOnTheWall = 99 - $i;
-      $bottlesAfterTakeOne = $bottlesOnTheWall - 1;
+      $numberOfBottlesOnTheWall = 99 - $i;
       $stanzas[] = new Stanza([
-        new BottleOnTheWallSentence($bottlesOnTheWall),
-        new TakeOneAndPassItSentence($bottlesAfterTakeOne)
+        new BottleOnTheWallSentence($numberOfBottlesOnTheWall),
+        new TakeOneAndPassItSentence($numberOfBottlesOnTheWall)
       ]);
     }
     return $stanzas;
