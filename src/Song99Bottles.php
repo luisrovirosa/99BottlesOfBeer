@@ -17,7 +17,12 @@ class Song99Bottles {
   }
 
   public function sing() {
-    $this->output->sing('99 bottles of beer on the wall, 99 bottles of beer.');
-    $this->output->sing('Take one down and pass it around, 98 bottles of beer on the wall.');
+    $sentences = [
+      '99 bottles of beer on the wall, 99 bottles of beer.',
+      'Take one down and pass it around, 98 bottles of beer on the wall.'
+    ];
+    array_map(function ($sentence) {
+      $this->output->sing($sentence);
+    }, $sentences);
   }
 }
