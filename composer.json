@@ -1,0 +1,11 @@
+{
+    "name": "luisrovirosa/99-bottles-of-beer",
+    "description": "Kata 99 bottles of beer",
+    "authors": [
+        {
+            "name": "Luis Rovirosa",
+            "email": "luisrovirosa@gmail.com"
+        }
+    ],
+    "require": {}
+}
