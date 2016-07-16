@@ -3,17 +3,14 @@
 namespace Song99Bottles;
 
 class Song99Bottles {
-  /**
-   * @var \Song99Bottles\Output
-   */
-  private $output;
+  private $singer;
 
   /**
    * Song99Bottles constructor.
    * @param \Song99Bottles\Output $output
    */
   public function __construct(Output $output) {
-    $this->output = $output;
+    $this->singer = new Singer($output);
   }
 
   public function sing() {
@@ -32,8 +29,6 @@ class Song99Bottles {
    * @param Stanza[] $stanzas
    */
   private function singStanzas($stanzas) {
-    array_map(function (Stanza $stanza) {
-      $stanza->sing($this->output);
-    }, $stanzas);
+    $this->singer->sing($stanzas);
   }
 }
