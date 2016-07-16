@@ -16,4 +16,15 @@ class Song99BottlesTest extends \PHPUnit_Framework_TestCase {
     $firstSentence = '99 bottles of beer on the wall, 99 bottles of beer.';
     $output->sing($firstSentence)->shouldHaveBeenCalled();
   }
+
+  /** @test */
+  public function should_song_the_second_sentence() {
+    $output = $this->prophesize(Output::class);
+    $song = new Song99Bottles($output->reveal());
+
+    $song->sing();
+
+    $secondSentence = 'Take one down and pass it around, 98 bottles of beer on the wall.';
+    $output->sing($secondSentence)->shouldHaveBeenCalled();
+  }
 }
