@@ -2,7 +2,7 @@
 
 namespace Song99Bottles;
 
-class Stanza {
+class Stanza implements Singable {
   /**
    * @var \Song99Bottles\Sentence[]
    */

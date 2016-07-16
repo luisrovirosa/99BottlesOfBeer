@@ -16,12 +16,16 @@ class Singer {
     $this->output = $output;
   }
 
-  public function sing($singables) {
-    if (is_array($singables)) {
-      return array_map(function ($singable) {
+  /**
+   * @param Singable[]|string $toSing
+   */
+  public function sing($toSing) {
+    if (is_array($toSing)) {
+      array_map(function (Singable $singable) {
         $singable->sing($this);
-      }, $singables);
+      }, $toSing);
+      return;
     }
-    return $this->output->sing($singables);
+    $this->output->sing($toSing);
   }
 }

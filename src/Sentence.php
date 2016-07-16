@@ -2,7 +2,7 @@
 
 namespace Song99Bottles;
 
-class Sentence {
+class Sentence implements Singable {
   /**
    * @var string
    */
