@@ -21,13 +21,13 @@ class Stanza implements Singable {
   }
 
   /**
-   * @param $numberOfSentence
+   * @param $numberOfStanza
    * @return \Song99Bottles\Stanza
    */
-  public static function sentence($numberOfSentence) {
+  public static function create($numberOfStanza) {
     return new Stanza([
-      new BottleOnTheWallSentence($numberOfSentence),
-      new TakeOneAndPassItSentence($numberOfSentence)
+      new BottleOnTheWallSentence($numberOfStanza),
+      new TakeOneAndPassItSentence($numberOfStanza)
     ]);
   }
 

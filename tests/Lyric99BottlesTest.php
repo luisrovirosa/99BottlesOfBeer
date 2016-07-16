@@ -21,7 +21,7 @@ class Lyric99BottlesTest extends \PHPUnit_Framework_TestCase {
 
     $stanzas = $lyric->stanzas();
 
-    $this->assertEquals(Stanza::sentence(1), $stanzas[0]);
+    $this->assertEquals(Stanza::create(1), $stanzas[0]);
   }
 
 }

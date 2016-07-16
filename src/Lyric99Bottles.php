@@ -12,7 +12,7 @@ class Lyric99Bottles {
     $numberOfBottles = range(1, self::NUMBER_OF_STANZAS);
 
     return array_map(function ($numberOfBottles) {
-      return Stanza::sentence($numberOfBottles);
+      return Stanza::create($numberOfBottles);
     }, $numberOfBottles);
   }
 }
