@@ -8,10 +8,10 @@ class Lyric99Bottles {
    * @return Stanza[]
    */
   public function stanzas() {
-    $numberOfBottles = array_reverse(range(0,99));
+    $numberOfBottles = range(1, 100);
 
-    return array_map(function ($numberOfBottles){
-      return Stanza::forBottles($numberOfBottles);
+    return array_map(function ($numberOfBottles) {
+      return Stanza::sentence($numberOfBottles);
     }, $numberOfBottles);
   }
 }

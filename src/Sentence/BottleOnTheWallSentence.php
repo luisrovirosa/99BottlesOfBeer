@@ -6,17 +6,18 @@ class BottleOnTheWallSentence extends Sentence {
 
   /**
    * BottleSentence constructor.
-   * @param int $numberOfBottlesOnTheWall
+   * @param int $numberOfSentence
    */
-  public function __construct($numberOfBottlesOnTheWall) {
-    parent::__construct($this->sentence($numberOfBottlesOnTheWall));
+  public function __construct($numberOfSentence) {
+    parent::__construct($this->sentence($numberOfSentence));
   }
 
   /**
-   * @param $bottlesOnTheWall
+   * @param $numberOfSentence
    * @return string
    */
-  private function sentence($bottlesOnTheWall) {
+  private function sentence($numberOfSentence) {
+    $bottlesOnTheWall = 100 - $numberOfSentence;
     return "$bottlesOnTheWall bottles of beer on the wall, $bottlesOnTheWall bottles of beer.";
   }
 }

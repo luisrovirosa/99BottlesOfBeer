@@ -6,17 +6,18 @@ class TakeOneAndPassItSentence extends Sentence {
 
   /**
    * TakeOneAndPassItSentence constructor.
-   * @param int $numberOfBottles
+   * @param int $numberOfSentence
    */
-  public function __construct($numberOfBottles) {
-    parent::__construct($this->sentence($numberOfBottles));
+  public function __construct($numberOfSentence) {
+    parent::__construct($this->sentence($numberOfSentence));
   }
 
   /**
-   * @param $numberOfBottlesOnTheWall
+   * @param $numberOfSentence
    * @return string
    */
-  private function sentence($numberOfBottlesOnTheWall) {
-    return "Take one down and pass it around, " . ($numberOfBottlesOnTheWall - 1). " bottles of beer on the wall.";
+  private function sentence($numberOfSentence) {
+    $remainingBottles = 100 - $numberOfSentence - 1;
+    return "Take one down and pass it around, " . ($remainingBottles) . " bottles of beer on the wall.";
   }
 }
