@@ -9,5 +9,15 @@
     ],
     "require": {
         "phpunit/phpunit": "4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Song99Bottles\\": [
+                "src"
+            ],
+            "Song99Bottles\\Tests\\": [
+                "tests"
+            ]
+        }
     }
 }
