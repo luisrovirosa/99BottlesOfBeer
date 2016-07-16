@@ -28,6 +28,10 @@ class Singer {
     }
   }
 
+  public function pause() {
+    $this->output->sing("");
+  }
+
   /**
    * @param Singable[] $toSing
    */

@@ -18,5 +18,6 @@ class Stanza implements Singable {
 
   public function sing(Singer $singer) {
     $singer->sing($this->sentences);
+    $singer->pause();
   }
 }
