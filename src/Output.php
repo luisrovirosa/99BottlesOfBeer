@@ -6,5 +6,6 @@ class Output {
    * @param string $sentence
    */
   public function sing($sentence) {
+    print_r("$sentence\n");
   }
 }
